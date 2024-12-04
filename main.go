@@ -172,14 +172,14 @@ func forwardRequest(req *http.Request, reqSourceIP string, reqDestionationPort s
 
 // Listen for incoming connections.
 func openTCPClient() {
-	ln, err := net.Listen("tcp", ":4789")
+	ln, err := net.Listen("tcp", ":80")
 	if err != nil {
 		// If TCP listener cannot be established, NLB health checks would fail
 		// For this reason, we OS.exit
 		log.Println("Error listening on TCP", ":", err)
 		os.Exit(1)
 	}
-	log.Println("Listening on TCP 4789")
+	log.Println("Listening on TCP 80")
 	for {
 		// Listen for an incoming connection and close it immediately.
 		conn, _ := ln.Accept()
