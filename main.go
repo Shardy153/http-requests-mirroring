@@ -180,7 +180,7 @@ func openTCPClient() {
 		os.Exit(1)
 	}
 	log.Println("print ln", ln)
-	log.Println("type of  ln", type(ln))
+	log.Println("type of  ln", reflect.TypeOf(ln))
 	log.Println("Listening on TCP 80")
 	for {
 		// Listen for an incoming connection and close it immediately.
