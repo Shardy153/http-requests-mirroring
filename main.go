@@ -25,6 +25,7 @@ import (
 	"net/http"
 	"os"
 	"time"
+	"reflect"
 
 	"github.com/google/gopacket"
 	"github.com/google/gopacket/examples/util"
